@@ -1,1 +1,50 @@
+body{
+  background:#0e0e0e;
+  color:white;
+  font-family:Segoe UI;
+}
 
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:#121212;
+  border-radius:12px;
+  margin:10px;
+}
+
+.links a{
+  margin:0 10px;
+  color:#aaa;
+  text-decoration:none;
+}
+
+.hero{
+  text-align:center;
+  margin-top:60px;
+}
+
+.screen{
+  width:45%;
+  border-radius:12px;
+  margin:10px;
+}
+
+.btn{
+  background:#6b5cff;
+  padding:12px 24px;
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.red{background:#d33;}
+.yellow{background:#db3;}
+.green{background:#3d9;}
