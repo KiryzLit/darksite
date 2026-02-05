@@ -1,50 +1,18 @@
-body{
-  background:#0e0e0e;
-  color:white;
-  font-family:Segoe UI;
-}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 30px;
-  background:#121212;
-  border-radius:12px;
-  margin:10px;
-}
-
-.links a{
-  margin:0 10px;
-  color:#aaa;
-  text-decoration:none;
-}
-
-.hero{
-  text-align:center;
-  margin-top:60px;
-}
-
-.screen{
-  width:45%;
-  border-radius:12px;
-  margin:10px;
-}
-
-.btn{
-  background:#6b5cff;
-  padding:12px 24px;
-  border-radius:8px;
-  color:white;
-  text-decoration:none;
-}
-
-.dot{
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  display:inline-block;
-}
-
-.red{background:#d33;}
-.yellow{background:#db3;}
-.green{background:#3d9;}
+body{background:#0a0a0a;color:white;font-family:Segoe UI;margin:0}
+.nav{display:flex;justify-content:space-between;align-items:center;background:#101010;margin:10px;padding:12px 20px;border-radius:14px}
+.logo{width:36px;margin-right:10px}
+.brand{font-weight:bold;margin-right:20px}
+.right a{margin:0 8px;color:#bbb;text-decoration:none}
+.lang{background:#181818;color:white;border:0;padding:6px 10px;border-radius:8px}
+.hero{text-align:center;margin-top:60px}
+.screens{display:flex;justify-content:center;gap:20px}
+.screen{width:45%;border-radius:12px;transition:.3s}
+.screen:hover{transform:scale(1.02)}
+.cards{margin:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.card{background:#111;padding:12px;border-radius:10px}
+.btn{background:white;color:black;padding:12px 24px;border-radius:10px;text-decoration:none}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.red{background:#d33}.yellow{background:#db3}.green{background:#3d9}
+.fade{opacity:0;transform:translateY(20px);animation:show .6s forwards}
+@keyframes show{to{opacity:1;transform:none}}

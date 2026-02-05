@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"/>
 <title>DarkSolutions</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">DS</div>
+<nav class="nav">
+  <div class="left">
+    <img src="images/injector.png" class="logo"/>
+    <span class="brand">DarkSolutions</span>
 
-  <div class="links">
-    <a href="#home" id="nav_home">Home</a>
-    <a href="#download" id="nav_download">Download</a>
-    <a href="#changelog" id="nav_changelog">Changelog</a>
-    <a href="#contacts" id="nav_contacts">Contacts</a>
+    <div class="status">
+      <div id="dot" class="dot red"></div>
+      <span id="status_text"></span>
+    </div>
   </div>
 
-  <button onclick="toggleLang()" class="lang">EN/RU</button>
+  <div class="right">
+    <a href="#home">Home</a>
+    <a href="#download">Download</a>
+    <a href="#changelog">Changelog</a>
+    <a href="#contacts">Contacts</a>
+
+    <button class="lang" onclick="toggleLang()">EN | RU</button>
+  </div>
 </nav>
 
-<section id="home" class="hero">
-  <h1 id="title">DarkSolutions</h1>
-
-  <div class="status">
-    <div id="dot" class="dot red"></div>
-    <span id="status_text">...</span>
-  </div>
-
+<section id="home" class="hero fade">
+  <h1 id="title"></h1>
   <p id="subtitle"></p>
 
-  <img class="screen" src="images/injector.png">
-  <img class="screen" src="images/loader.png">
+  <div class="screens">
+    <img src="images/injector.png" class="screen"/>
+    <img src="images/loader.png" class="screen"/>
+  </div>
 </section>
 
-<section id="download">
-  <h2 id="download_btn"></h2>
+<section class="cards fade">
+  <h2 id="features"></h2>
 
-  <a class="btn"
-     href="https://www.dropbox.com/scl/fi/urtmvmcjnx2ezsmlt0vcl/DSLoader.exe?rlkey=vmxnvwp9v08opxgdpw11tzosp&st=ao1p8tbd&dl=1">
-     Download Loader
-  </a>
+  <div class="grid">
+    <div class="card" id="f1"></div>
+    <div class="card" id="f2"></div>
+    <div class="card" id="f3"></div>
+    <div class="card" id="f4"></div>
+    <div class="card" id="f5"></div>
+  </div>
+</section>
 
+<section id="download" class="fade">
+  <a class="btn" href="https://www.dropbox.com/scl/fi/urtmvmcjnx2ezsmlt0vcl/DSLoader.exe?rlkey=vmxnvwp9v08opxgdpw11tzosp&st=ao1p8tbd&dl=1" id="download"></a>
   <div id="version"></div>
 </section>
 
-<section id="changelog">
+<section id="changelog" class="fade">
   <pre id="changelog_text"></pre>
 </section>
 
-<section id="contacts">
+<section id="contacts" class="fade">
+  <h2 id="contacts"></h2>
   <a href="https://discord.gg/9W9UcM5w">Discord</a>
   <a href="https://t.me/darksolutionexe">Telegram</a>
 </section>
 
-<script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
