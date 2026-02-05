@@ -141,6 +141,10 @@ body::before{
     0 0 40px rgba(40,200,120,.1);
 }
 
+#features{
+  margin-left: 40px;
+}
+
 /* CARDS */
 .grid{
   display:grid;
