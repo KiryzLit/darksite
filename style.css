@@ -1,8 +1,20 @@
 body{
-  background:#0a0a0a;
+  background:#090909;
   color:white;
   font-family:Segoe UI;
   margin:0;
+}
+
+/* ========== XENO LIKE BACKGROUND ========== */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size:40px 40px, 120px 120px;
+  z-index:-1;
 }
 
 /* NAVBAR */
@@ -10,14 +22,12 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:#101010;
+  background:rgba(14,14,14,.85);
   margin:10px;
   padding:12px 20px;
   border-radius:14px;
-  position:sticky;
-  top:0;
   backdrop-filter:blur(10px);
-  z-index:100;
+  border:1px solid #161616;
 }
 
 .left{
@@ -27,7 +37,7 @@ body{
 }
 
 .logo{
-  width:32px;
+  width:28px;
 }
 
 .brand{
@@ -35,31 +45,38 @@ body{
   margin-right:10px;
 }
 
-/* STATUS DOT */
+/* STATUS DOT – как в лоадере */
 .status{
   display:flex;
   align-items:center;
   gap:6px;
   font-size:13px;
-  opacity:.9;
 }
 
 .dot{
-  width:10px;
-  height:10px;
+  width:11px;
+  height:11px;
   border-radius:50%;
-  display:inline-block;
-  box-shadow:0 0 8px rgba(0,0,0,.3);
+  border:1px solid rgba(255,255,255,.1);
 }
 
-.red{background:#d33}
-.yellow{background:#db3}
-.green{background:#3d9}
+.red{
+  background:#d22;
+  box-shadow:0 0 10px rgba(220,40,40,.6);
+}
+.yellow{
+  background:#d9a400;
+  box-shadow:0 0 10px rgba(200,160,0,.6);
+}
+.green{
+  background:#2ad46e;
+  box-shadow:0 0 10px rgba(40,200,120,.6);
+}
 
 /* NAV LINKS */
 .right a{
   margin:0 8px;
-  color:#bbb;
+  color:#aaa;
   text-decoration:none;
   transition:.2s;
 }
@@ -69,9 +86,9 @@ body{
 }
 
 .lang{
-  background:#181818;
+  background:#111;
   color:white;
-  border:0;
+  border:1px solid #222;
   padding:6px 10px;
   border-radius:8px;
   cursor:pointer;
@@ -93,33 +110,31 @@ body{
 .screen{
   width:45%;
   border-radius:12px;
+  border:1px solid #181818;
   transition:.3s;
-  box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
 .screen:hover{
-  transform:scale(1.02);
+  transform:scale(1.01);
+  border-color:#222;
 }
 
 /* CARDS */
-.cards{
-  margin:40px;
-}
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:10px;
+  margin:30px;
 }
 
 .card{
-  background:#111;
+  background:#0e0e0e;
   padding:12px;
   border-radius:10px;
-  border:1px solid #1a1a1a;
+  border:1px solid #161616;
 }
 
-/* DOWNLOAD */
+/* ======= ЧЁРНАЯ КНОПКА В СТИЛЕ XENO ======= */
 .download-box{
   text-align:center;
   margin:40px 0;
@@ -127,19 +142,35 @@ body{
 
 .download-btn{
   display:inline-block;
-  background:#6c5cff;
+  background:#0f0f0f;
   color:white;
   padding:14px 26px;
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
   margin:10px 0;
+  border:1px solid #222;
   transition:.2s;
 }
 
 .download-btn:hover{
-  transform:scale(1.05);
-  background:#7b6dff;
+  background:#141414;
+  border-color:#333;
+}
+
+/* CHANGELOG FIX */
+#changelog_section{
+  max-width:800px;
+  margin:0 auto;
+  text-align:left;
+}
+
+pre{
+  background:#0e0e0e;
+  border:1px solid #161616;
+  padding:12px;
+  border-radius:10px;
+  white-space:pre-wrap;
 }
 
 /* CONTACTS */
@@ -148,27 +179,16 @@ body{
   margin:40px;
 }
 
-.contact-links{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  margin-top:10px;
-}
-
 .contact{
-  background:#111;
+  background:#0f0f0f;
+  border:1px solid #161616;
   padding:10px 16px;
   border-radius:8px;
   text-decoration:none;
   color:white;
-  transition:.2s;
 }
 
-.contact:hover{
-  background:#181818;
-}
-
-/* ANIMATION */
+/* ANIM */
 .fade{
   opacity:0;
   transform:translateY(20px);
