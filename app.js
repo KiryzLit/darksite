@@ -92,6 +92,22 @@ function draw(){
   requestAnimationFrame(draw);
 }
 
+// ===== DISCORD COUNTER =====
+async function loadDiscord(){
+  try{
+    let r = await fetch(
+      'https://discord.com/api/guilds/9W9UcM5w/widget.json'
+    );
+
+    let j = await r.json();
+    document.getElementById('discord_users').innerText =
+      j.presence_count || '---';
+  }catch{
+    document.getElementById('discord_users').innerText='---';
+  }
+}
+
+loadDiscord();
 draw();
 loadLang();
 checkVersion();
