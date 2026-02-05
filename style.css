@@ -21,6 +21,12 @@ body::before{
   z-index:-1;
 }
 
+.users{
+  margin-top:14px;
+  opacity:.9;
+  font-size:15px;
+}
+
 /* NAVBAR */
 .nav{
   display:flex;
