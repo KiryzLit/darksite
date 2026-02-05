@@ -59,6 +59,40 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// ===== PARTS =====
+const c = document.getElementById('particles');
+const ctx = c.getContext('2d');
+
+function resize(){
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
+}
+resize();
+window.onresize = resize;
+
+let p = Array.from({length:70}, () => ({
+  x: Math.random()*c.width,
+  y: Math.random()*c.height,
+  s: Math.random()*1.2+0.2
+}));
+
+function draw(){
+  ctx.clearRect(0,0,c.width,c.height);
+  ctx.fillStyle='#fff';
+
+  p.forEach(a=>{
+    ctx.beginPath();
+    ctx.arc(a.x,a.y,a.s,0,6);
+    ctx.fill();
+
+    a.y += a.s*0.3;
+    if(a.y>c.height) a.y=0;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
 loadLang();
 checkVersion();
 loadChangelog();
